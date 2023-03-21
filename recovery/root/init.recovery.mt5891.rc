@@ -1,0 +1,11 @@
+on init
+    loglevel 7
+    start watchdogd
+
+on post-fs-data
+    insmod /dtv_driver.ko osd1_src_width=960 osd1_src_height=540 osd2_src_width=1920 osd2_src_height=1080
+
+# Set watchdog timer to 30 seconds and pet it every 10 seconds to get a 20 second margin
+service watchdogd /sbin/watchdogd 10 20
+    class core
+    seclabel u:r:watchdogd:s0

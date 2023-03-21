@@ -1,0 +1,13 @@
+/dev/hidraw*              0660   system     audio
+/dev/video*               0660   system     camera
+/dev/mali0                0666   root       root
+/dev/sw_sync              0666   root       root
+/dev/ion                  0666   system     system
+/dev/trusty-ipc-dev0      0660   system     keystore
+#connectivity start
+/dev/stpbt                0660  bluetooth   bluetooth
+/dev/block/mmcblk0rpmb    0660   media     mediadrm
+/dev/block/mmcblk0p3      0660   root       system
+/dev/block/mmcblk0p18     0660   root      root
+/dev/ttyMT5               0660   system     oem_2903
+/dev/ttyUSB*              0660   root       oem_2905
